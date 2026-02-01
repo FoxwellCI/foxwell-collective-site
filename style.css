@@ -1,130 +1,123 @@
-/* Basic reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Body of the page */
+/* Body */
 body {
+    font-family: 'Arial', sans-serif;
     background-color: #ffffff; /* White background */
-    color: #000000; /* Main text black */
+    color: #000000; /* Black text */
     line-height: 1.6;
     font-size: 16px;
-    padding: 20px;
 }
 
-/* Header for the logo */
+/* Links and Emails */
+a {
+    color: #555555; /* Dark gray */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
 header.logo-container {
     text-align: center;
-    margin-bottom: 40px;
+    padding: 40px 20px 20px 20px;
 }
 
 .studio-logo {
-    max-width: 400px;
-    width: 80%;
+    max-width: 90%;
     height: auto;
 }
 
-/* Headings */
-h1, h2, h3 {
-    font-weight: 700;
-    margin-bottom: 15px;
+/* Main Sections */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 50px;
+    padding: 20px;
+    border-bottom: 1px solid #eeeeee; /* Light gray separator */
+}
+
+/* Section Titles */
+h1, h2 {
+    font-family: 'Georgia', serif;
+    margin-bottom: 20px;
+    color: #000000;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.5em;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 h2 {
-    font-size: 2rem;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #000000;
-    padding-bottom: 5px;
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-/* Sections */
-section {
-    margin-bottom: 40px;
+    font-size: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 /* Paragraphs */
 p {
     margin-bottom: 15px;
-    color: #000000;
 }
 
-/* Links and emails */
-a {
-    color: #555555; /* Dark gray for links */
-    text-decoration: underline;
-}
-
-a:hover {
-    color: #000000;
+/* Credits */
+section h2 + p strong,
+section h2 + p em {
+    color: #222222; /* Slightly darker black for emphasis */
 }
 
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 50px;
-    padding: 20px 0;
-    border-top: 1px solid #cccccc;
-    color: #555555;
-    font-size: 0.9rem;
+    padding: 20px;
+    background-color: #f8f8f8;
+    color: #333333;
+    font-size: 14px;
 }
 
-/* Specific content */
-#contact-email {
-    font-style: italic;
+/* Team Guidelines List */
+h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
 }
 
-/* Lists inside rules or content */
-ul, ol, p ul, p ol {
+ul, p {
     margin-left: 20px;
-}
-
-/* List items styling */
-p ul li, p ol li {
-    margin-bottom: 5px;
-}
-
-/* Bold highlights */
-strong {
-    font-weight: 700;
-}
-
-/* Minor highlights in gray */
-em, .secondary {
-    color: #777777;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    body {
-        padding: 15px;
-        font-size: 15px;
-    }
-
     h1 {
-        font-size: 2rem;
+        font-size: 2em;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.5em;
     }
 
-    h3 {
-        font-size: 1.2rem;
+    main {
+        padding: 10px;
     }
+}
+
+/* Highlight important names in credits */
+.credits strong {
+    color: #000000;
+}
+
+/* Highlight indirect collaborators subtly */
+.credits em {
+    color: #555555;
 }
